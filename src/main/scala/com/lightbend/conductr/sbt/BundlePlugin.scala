@@ -249,7 +249,7 @@ object BundlePlugin extends AutoPlugin {
 
   private def writeConfig(target: File, contents: String): File = {
     val configFile = target / "bundle.conf"
-    IO.write(configFile, contents, Utf8)
+    IO.write(configFile, contents + "\n", Utf8)
     configFile
   }
 
